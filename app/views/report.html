@@ -1,0 +1,83 @@
+<div class="boxed">
+    <h3>毕节至威宁高速雾区段数据分析展示</h3>
+</div>
+<button class="btn btn-success" data-bind="click: refreshData">refreshData</button>
+<div class="panel fogreport">
+    <div class="panel-body">
+        <div class="row datebox">
+            <label for="demo-remember-me">时间范围：</label>
+            <input id="start-time" style="width:auto" />
+            <input id="end-time" style="width:auto" />
+            <button class="btn btn-default" data-bind="click: function () { $root.switchChoice(1, $element) }">今天</button>&nbsp;
+            <label for="demo-remember-me">| 最近：</label>&nbsp;&nbsp;
+            <button class="btn btn-default" data-bind="click: function () { $root.switchChoice(2, $element) }">1个月</button>&nbsp;&nbsp;
+            <button class="btn btn-default" data-bind="click: function () { $root.switchChoice(3, $element) }">3个月</button>&nbsp;&nbsp;
+            <button class="btn btn-default" data-bind="click: function () { $root.switchChoice(4, $element) }">1年</button>
+        </div>
+    </div>
+    <div class="panel-body" style="border-top: 1px solid rgb(231, 236, 243);">
+        <div class="row areabox">
+            <!-- Inline Form  -->
+            <!--===================================================-->
+            <label for="demo-remember-me">雾区级别：</label>
+            &nbsp;
+            <button class="btn btn-primary" data-bind="click: function () { $root.switchSty($element, 'areabox') }">全部</button>&nbsp;&nbsp;
+            <button class="btn btn-default" data-bind="click: function () { $root.switchSty($element, 'areabox') }">大雾</button>&nbsp;&nbsp;
+            <button class="btn btn-default" data-bind="click: function () { $root.switchSty($element, 'areabox') }">浓雾</button>&nbsp;&nbsp;
+            <button class="btn btn-default" data-bind="click: function () { $root.switchSty($element, 'areabox') }">薄雾</button>&nbsp;&nbsp;
+            <button class="btn btn-default" data-bind="click: function () { $root.switchSty($element, 'areabox') }">无雾</button>
+            <!--
+                <button class="btn btn-default btn-icon btnRight" onclick="locaLink();"><i class="demo-psi-file icon-lg"></i><span>进入统计图表</span></button>
+                 -->
+        </div>
+        <br />
+        <br />
+        <div class="row namebox" id="namebox">
+            <label for="demo-remember-me">雾区名称：</label>
+            <button class="btn btn-default" data-bind="click: locaLink" style="margin: 2px 0px">
+                <i class="fa fa-align-center"></i>
+                进入详情
+            </button>
+
+            <div data-bind="foreach: regions">
+                <button data-bind="click: function () { $root.switchSty($element, 'namebox') }, attr: { dir: dir, class: className, id: Id }, text: Name"></button>&nbsp;&nbsp;
+            </div>
+            <!--
+                <button class="btn btn-default add-tooltip" onclick="switchSty(this, 'namebox');" data-toggle="tooltip" data-container="body" data-placement="bottom" data-original-title="毕节至威宁段" aria-describedby="tooltip436825">毕节至威宁段</button>&nbsp;&nbsp;
+                <button class="btn btn-default add-tooltip" onclick="switchSty(this, 'namebox');" data-toggle="tooltip" data-container="body" data-placement="bottom" data-original-title="纳雍至毕节段" aria-describedby="tooltip436825">纳雍至毕节段</button>&nbsp;&nbsp;
+                <button class="btn btn-default add-tooltip" onclick="switchSty(this, 'namebox');" data-toggle="tooltip" data-container="body" data-placement="bottom" data-original-title="黔川值纳溪段" aria-describedby="tooltip436825">黔川值纳溪段</button>&nbsp;&nbsp;
+                <button class="btn btn-default add-tooltip" onclick="switchSty(this, 'namebox');" data-toggle="tooltip" data-container="body" data-placement="bottom" data-original-title="遵义至毕节段" aria-describedby="tooltip436825">遵义至毕节段</button>&nbsp;&nbsp;
+                 -->
+            <!--===================================================-->
+            <!-- End Inline Form  -->
+        </div>
+    </div>
+    <!-- 列表部分 -->
+    <div class="panel-body kendo-panel-box" style="border-top: 1px solid rgb(231, 236, 243);">
+        <div id="kendoGrid"></div>
+    </div>
+
+</div>
+
+<div class="panel">
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="scatterContainer"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="panel">
+    <div class="panel-body">
+        <div class="row pad-ver">
+            <button class="btn btn-info" data-bind="click: exportGrid">Export</button>
+        </div>
+        <div class="row pad-ver">
+            <div class="col-md-12">
+                <div id="dataGrid"></div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,4 @@
+app/common/*.js
+app/common/*.js.map
+app/viewmodels/*.js
+app/viewmodels/*.js.map

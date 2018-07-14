@@ -1,0 +1,47 @@
+﻿/*console*/
+
+.console
+{
+    background-color: transparent;
+    color: #333;
+    font: 11px Consolas, Monaco, "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+    margin: 0;
+    overflow-x: hidden;
+    text-align: left;
+    height: 200px;
+    border: 1px solid rgba(20,53,80,0.1);
+    background-color: #ffffff;
+    text-indent: 0;
+}
+
+.demo-section .box-col .console
+{
+    min-width: 200px;
+}
+
+.console .count
+{
+    background-color: #26c6da;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+    color: #ffffff;
+    font-size: 10px;
+    margin-left: 5px;
+    padding: 2px 6px 2px 5px;
+}
+
+.console div
+{
+    background-position: 6px -95px;
+    border-bottom: 1px solid #DDD;
+    padding: 5px 10px;
+    height: 2.5em;
+    line-height: 2em;
+    vertical-align: middle;
+}
+
+.console .error
+{
+    background-position: 6px -135px;
+}
