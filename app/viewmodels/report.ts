@@ -1,4 +1,4 @@
-/// <reference path="../typings/kendo/kendo.all.d.ts" />
+/// <reference path="../../lib/typings/kendo/kendo.all.d.ts" />
 import router = require("plugins/router");
 import kendoGridLocal = require('../common/kendoGridLocal');
 

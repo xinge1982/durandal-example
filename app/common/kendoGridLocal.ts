@@ -1,4 +1,4 @@
-/// <reference path="../../app/typings/kendo/kendo.all.d.ts" />
+/// <reference path="../../lib/typings/kendo/kendo.all.d.ts" />
 
 class kendoGridLocal<T> {
     constructor() {
